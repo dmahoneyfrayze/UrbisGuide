@@ -41,6 +41,40 @@ const organizationSchema = {
 };
 baseSchema['@graph'].push(organizationSchema);
 
+// 1.5 Local Business Schema (Furniture Store)
+const storeSchema = {
+  "@type": "FurnitureStore",
+  "@id": `${siteUrl}/#store`,
+  "name": "Urbis Concepts",
+  "image": logoUrl,
+  "url": siteUrl,
+  "telephone": "+16478665799",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "122 Evans Ave",
+    "addressLocality": "Etobicoke",
+    "addressRegion": "ON",
+    "postalCode": "M8Z 5W2",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.6166,
+    "longitude": -79.5118
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": ["Toronto", "Etobicoke", "Mississauga", "Oakville", "Burlington", "Greater Toronto Area"]
+};
+baseSchema['@graph'].push(storeSchema);
+
 // 2. WebSite Schema (Global)
 const websiteSchema = {
   "@type": "WebSite",
