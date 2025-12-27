@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Schema from '../components/Schema.astro';
+import TrustAuthor from '../components/TrustAuthor.astro';
 
 const { frontmatter } = Astro.props;
 const currentUrl = `https://guide.urbisconcepts.com${Astro.url.pathname.replace(/\/+$/, '')}/`;
@@ -63,6 +64,7 @@ if (frontmatter.category === 'Materials & Craft') {
         <!-- Content -->
         <div class="prose prose-lg md:prose-xl prose-headings:font-heading prose-headings:text-secondary prose-p:text-gray-600 prose-p:leading-loose prose-a:text-primary prose-a:font-bold hover:prose-a:text-primary/80 prose-img:rounded-xl prose-img:shadow-lg mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
             <slot />
+            <TrustAuthor />
         </div>
 
         <!-- Call to Action -->
