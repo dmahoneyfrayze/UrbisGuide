@@ -2,43 +2,50 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-secondary text-white py-12 mt-12">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-            <span class="font-heading text-xl font-bold tracking-tight">URBIS<span class="text-primary">CONCEPTS</span></span>
-            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                Handcrafted solid wood furniture. Built to last generations.
+<footer class="bg-secondary text-white pt-20 pb-10 mt-20">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="space-y-6">
+            <a href="/" class="block">
+                <span class="font-heading text-2xl font-bold tracking-tight">URBIS<span class="text-primary">CONCEPTS</span></span>
+            </a>
+            <p class="text-gray-400 text-sm leading-loose max-w-xs">
+                Handcrafted solid wood furniture designed to elevate your space. Built with passion, designed to last generations.
             </p>
         </div>
         
         <div>
-            <h3 class="font-bold mb-4 text-primary">Explore</h3>
-            <ul class="space-y-2 text-sm text-gray-300">
-                <li><a href="/materials" class="hover:text-white">Materials & Craft</a></li>
-                <li><a href="/guides" class="hover:text-white">Buying Guides</a></li>
-                <li><a href="/care" class="hover:text-white">Care Instructions</a></li>
-                <li><a href="/design" class="hover:text-white">Design Inspiration</a></li>
+            <h3 class="font-heading font-bold mb-6 text-primary text-lg">Explore</h3>
+            <ul class="space-y-4 text-sm text-gray-300">
+                <li><a href="/materials" class="hover:text-white transition-colors">Materials & Craft</a></li>
+                <li><a href="/guides" class="hover:text-white transition-colors">Buying Guides</a></li>
+                <li><a href="/care" class="hover:text-white transition-colors">Care Instructions</a></li>
+                <li><a href="/design" class="hover:text-white transition-colors">Design Inspiration</a></li>
             </ul>
         </div>
         
         <div>
-            <h3 class="font-bold mb-4 text-primary">Shop</h3>
-            <ul class="space-y-2 text-sm text-gray-300">
-                <li><a href="https://urbisconcepts.com/collections/all" class="hover:text-white">All Collections</a></li>
-                <li><a href="https://urbisconcepts.com/collections/live-edge" class="hover:text-white">Live Edge Tables</a></li>
-                <li><a href="https://urbisconcepts.com/pages/contact" class="hover:text-white">Contact Us</a></li>
-                <li><a href="https://urbisconcepts.com/pages/showroom" class="hover:text-white">Visit Showroom</a></li>
+            <h3 class="font-heading font-bold mb-6 text-primary text-lg">Shop</h3>
+            <ul class="space-y-4 text-sm text-gray-300">
+                <li><a href="https://urbisconcepts.com/collections/all" class="hover:text-white transition-colors">All Collections</a></li>
+                <li><a href="https://urbisconcepts.com/collections/live-edge" class="hover:text-white transition-colors">Live Edge Tables</a></li>
+                <li><a href="https://urbisconcepts.com/pages/contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="https://urbisconcepts.com/pages/showroom" class="hover:text-white transition-colors">Visit Showroom</a></li>
             </ul>
         </div>
         
         <div>
-             <h3 class="font-bold mb-4 text-primary">Connect</h3>
-             <p class="text-sm text-gray-300">
-                 Join our newsletter on the main site for updates.
+             <h3 class="font-heading font-bold mb-6 text-primary text-lg">Connect</h3>
+             <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                 Join our newsletter on the main site for exclusive updates and design tips.
              </p>
+             <a href="https://urbisconcepts.com" class="text-sm font-bold text-primary hover:text-white transition-colors">Subscribe &rarr;</a>
         </div>
     </div>
-    <div class="container mx-auto px-4 mt-12 pt-8 border-t border-gray-700 text-center text-xs text-gray-500">
-        &copy; {currentYear} Urbis Concepts. All rights reserved.
+    <div class="container mx-auto px-6 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 uppercase tracking-wider">
+        <p>&copy; {currentYear} Urbis Concepts. All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
     </div>
 </footer>
