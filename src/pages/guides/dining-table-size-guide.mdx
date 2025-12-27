@@ -13,6 +13,9 @@ faqs:
     answer: "Round tables are generally better for small, square rooms because they lack sharp corners and improve flow. Rectangular tables work best in standard dining rooms."
 ---
 
+import ProductCTA from '../../components/ProductCTA.astro';
+import CollectionGrid from '../../components/CollectionGrid.astro';
+
 The right dining table size balances comfort, flow, and visual proportion.
 
 ## Seating Guidelines
@@ -40,10 +43,21 @@ Maintain at least **36 inches of clearance** from table edge to walls or furnitu
 *   Forgetting walkways
 *   Choosing size before room layout
 
+<ProductCTA 
+  title="Handcrafted Live Edge Tables" 
+  description="Every table we build is one-of-a-kind, sourced from sustainable Parota and Acacia slabs. Custom sized to fit your exact dining room dimensions."
+  image="https://urbisconcepts.com/cdn/shop/files/Parota_Live_Edge_Dining_Table_1.jpg?v=1700000000"
+  url="https://urbisconcepts.com/collections/live-edge"
+  buttonText="View Available Slabs"
+/>
+
 ### Related guides
 *   [How to Choose a Dining Table](/guides/how-to-choose-a-dining-table)
 *   [Dining Tables for Small Spaces](/guides/best-dining-table-for-small-spaces)
 
-### Explore tables by size
-*   [6–8 Seat Dining Tables](https://urbisconcepts.com/collections/6-8-seater-dining-tables)
-*   [Large Statement Tables](https://urbisconcepts.com/collections/10-12-seater-dining-tables)
+### Explore related collections
+<CollectionGrid collections={[
+  { title: "Live Edge Tables", image: "https://images.unsplash.com/photo-1572048572872-2394404cf1f3?auto=format&fit=crop&q=80&w=800", url: "https://urbisconcepts.com/collections/live-edge" },
+  { title: "Solid Wood Tables", image: "https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&q=80&w=800", url: "https://urbisconcepts.com/collections/solid-wood-dining-tables" },
+  { title: "Dining Chairs", image: "https://images.unsplash.com/photo-1503602642458-2321114453ad?auto=format&fit=crop&q=80&w=800", url: "https://urbisconcepts.com/collections/dining-chairs" }
+]} />
