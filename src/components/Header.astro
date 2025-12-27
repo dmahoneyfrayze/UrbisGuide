@@ -1,0 +1,37 @@
+---
+const links = [
+	{ href: '/materials', label: 'Materials' },
+	{ href: '/guides', label: 'Buying Guides' },
+	{ href: '/design', label: 'Design' },
+	{ href: '/care', label: 'Care' },
+	{ href: '/why-urbis', label: 'Why Urbis' },
+];
+---
+
+<header class="bg-background border-b border-gray-100 shadow-sm sticky top-0 z-50">
+	<div class="container mx-auto px-4 h-20 flex items-center justify-between">
+		<a href="/" class="flex flex-col">
+			<span class="font-heading text-2xl font-bold tracking-tight text-secondary">URBIS<span class="text-primary">CONCEPTS</span></span>
+            <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">Guide & Resources</span>
+		</a>
+
+		<nav class="hidden md:flex gap-8">
+			{links.map((link) => (
+				<a href={link.href} class="text-secondary hover:text-primary font-medium transition-colors text-sm uppercase tracking-wide">
+					{link.label}
+				</a>
+			))}
+		</nav>
+        
+        <a href="https://urbisconcepts.com" class="hidden md:block bg-secondary text-white px-5 py-2 text-sm font-medium hover:bg-primary transition-colors">
+            Shop Store
+        </a>
+
+        <!-- Mobile Menu Button (Simple) -->
+        <button class="md:hidden text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+	</div>
+</header>

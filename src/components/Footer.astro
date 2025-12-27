@@ -1,0 +1,44 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-secondary text-white py-12 mt-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <span class="font-heading text-xl font-bold tracking-tight">URBIS<span class="text-primary">CONCEPTS</span></span>
+            <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                Handcrafted solid wood furniture. Built to last generations.
+            </p>
+        </div>
+        
+        <div>
+            <h3 class="font-bold mb-4 text-primary">Explore</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="/materials" class="hover:text-white">Materials & Craft</a></li>
+                <li><a href="/guides" class="hover:text-white">Buying Guides</a></li>
+                <li><a href="/care" class="hover:text-white">Care Instructions</a></li>
+                <li><a href="/design" class="hover:text-white">Design Inspiration</a></li>
+            </ul>
+        </div>
+        
+        <div>
+            <h3 class="font-bold mb-4 text-primary">Shop</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="https://urbisconcepts.com/collections/all" class="hover:text-white">All Collections</a></li>
+                <li><a href="https://urbisconcepts.com/collections/live-edge" class="hover:text-white">Live Edge Tables</a></li>
+                <li><a href="https://urbisconcepts.com/pages/contact" class="hover:text-white">Contact Us</a></li>
+                <li><a href="https://urbisconcepts.com/pages/showroom" class="hover:text-white">Visit Showroom</a></li>
+            </ul>
+        </div>
+        
+        <div>
+             <h3 class="font-bold mb-4 text-primary">Connect</h3>
+             <p class="text-sm text-gray-300">
+                 Join our newsletter on the main site for updates.
+             </p>
+        </div>
+    </div>
+    <div class="container mx-auto px-4 mt-12 pt-8 border-t border-gray-700 text-center text-xs text-gray-500">
+        &copy; {currentYear} Urbis Concepts. All rights reserved.
+    </div>
+</footer>
