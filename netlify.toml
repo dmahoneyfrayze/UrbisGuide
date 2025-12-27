@@ -2,11 +2,14 @@
   command = "npm run build"
   publish = "dist"
 
-[headers]
+# Cache fonts and visuals forever
+[[headers]]
   for = "/*.{woff,woff2,jpg,jpeg,png,gif,webp,svg}"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Default security headers for everything else
+[[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
