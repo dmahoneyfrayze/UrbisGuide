@@ -4,6 +4,14 @@ import Schema from '../components/Schema.astro';
 
 const { frontmatter } = Astro.props;
 const currentUrl = `https://guide.urbisconcepts.com${Astro.url.pathname}`;
+
+// Map Category to Parent Hub for Breadcrumbs
+let parentHub = { name: 'Guides', url: '/guides' };
+if (frontmatter.category === 'Materials & Craft') {
+    parentHub = { name: 'Materials', url: '/materials' };
+} else if (frontmatter.category === 'Care & Maintenance') {
+    parentHub = { name: 'Care', url: '/care' };
+}
 ---
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
@@ -14,6 +22,7 @@ const currentUrl = `https://guide.urbisconcepts.com${Astro.url.pathname}`;
             url={currentUrl}
             type={frontmatter.schemaType || 'Article'}
             faqs={frontmatter.faqs}
+            parent={parentHub}
         />
     </Fragment>
 

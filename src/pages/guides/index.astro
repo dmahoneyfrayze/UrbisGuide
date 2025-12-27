@@ -1,35 +1,45 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-const posts = await Astro.glob('./*.mdx');
+import CollectionLayout from '../../layouts/CollectionLayout.astro';
 ---
 
-<BaseLayout title="Buying Guides">
-    <div class="py-16 md:py-24 text-center bg-secondary text-white mb-12">
-        <h1 class="text-5xl md:text-6xl font-heading font-bold mb-6 animate-slide-up">Buying Guides</h1>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light animate-slide-up delay-100">
-            Expert advice on sizing, selecting, and customizing the perfect furniture for your home.
+<CollectionLayout 
+    title="Buying Guides" 
+    description="Expert advice on dining table sizing, selection frameworks, and design planning."
+    urlCategory="guides"
+>
+    <!-- Authority Copy (Slot: intro) -->
+    <div slot="intro">
+        <p>
+            Furniture is a significant investment, and the details matter. At Urbis Concepts, we believe an educated buyer is a happy owner. Our buying guides are designed to cut through the marketing noise and give you the technical specifications, sizing rules, and material facts you need to choose with confidence.
+        </p>
+        <p class="mt-4">
+            We don't just sell tables; we help you design your dining experience. Learn exactly how much clearance you need (<strong>hint: it's more than you think</strong>) and which shapes optimize small layouts vs. open floor plans.
         </p>
     </div>
 
-    <div class="container mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {posts.map((post) => (
-            <a href={post.url} class="group block bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden rounded-xl">
-                <div class="h-48 bg-gray-200 overflow-hidden relative">
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                     <span class="absolute bottom-4 left-4 text-white text-xs font-bold uppercase tracking-widest bg-primary px-2 py-1 rounded">Read Article</span>
-                </div>
-                <div class="p-8">
-                    <h2 class="text-2xl font-heading font-bold mb-3 text-secondary group-hover:text-primary transition-colors">
-                        {post.frontmatter.title}
-                    </h2>
-                    <p class="text-gray-600 line-clamp-3 leading-relaxed mb-4">
-                        {post.frontmatter.description}
-                    </p>
-                    <span class="text-primary font-bold text-sm uppercase tracking-wider flex items-center">
-                        Read More <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </span>
-                </div>
-            </a>
-        ))}
-    </div>
-</BaseLayout>
+    <!-- Collection Items -->
+    <a href="/guides/how-to-choose-a-dining-table" class="group block">
+        <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-6 relative">
+             <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&q=80&w=800" alt="Dining Room" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">How to Choose a Dining Table</h3>
+        <p class="text-gray-600">Our step-by-step framework for matching a table to your lifestyle.</p>
+    </a>
+
+    <a href="/guides/dining-table-size-guide" class="group block">
+        <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-6 relative">
+             <img src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&q=80&w=800" alt="Dining Table Size Diagram concept" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Dining Table Size Guide</h3>
+        <p class="text-gray-600">Seating capacities, clearance rules, and shape optimization.</p>
+    </a>
+
+    <a href="/guides/is-solid-wood-furniture-worth-it" class="group block">
+        <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-6 relative">
+             <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=800" alt="Solid Wood Detail" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Is Solid Wood Worth It?</h3>
+        <p class="text-gray-600">The financial and practical breakdown of why solid wood wins over veneer.</p>
+    </a>
+
+</CollectionLayout>
