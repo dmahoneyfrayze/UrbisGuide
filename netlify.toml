@@ -3,12 +3,10 @@
   publish = "dist"
 
 [headers]
-  # Cache fonts and images forever (they have hashed filenames or are static)
   for = "/*.{woff,woff2,jpg,jpeg,png,gif,webp,svg}"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-  # Standard caching for other files
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
