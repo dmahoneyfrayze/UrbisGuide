@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import Schema from '../components/Schema.astro';
 
 const { frontmatter } = Astro.props;
-const currentUrl = `https://guide.urbisconcepts.com${Astro.url.pathname}`;
+const currentUrl = `https://guide.urbisconcepts.com${Astro.url.pathname.replace(/\/+$/, '')}/`;
 
 // Map Category to Parent Hub for Breadcrumbs
 let parentHub = { name: 'Guides', url: '/guides' };

@@ -119,19 +119,7 @@ if (faqs && faqs.length > 0) {
   };
   baseSchema['@graph'].push(faqSchema);
 }
-  const faqSchema = {
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-  baseSchema['@graph'].push(faqSchema);
-}
+
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(baseSchema)} />

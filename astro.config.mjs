@@ -13,6 +13,10 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://guide.urbisconcepts.com',
+  trailingSlash: 'always',
+  build: {
+    format: 'directory'
+  },
 
   integrations: [sitemap(), mdx()]
 });
