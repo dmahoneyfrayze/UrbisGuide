@@ -7,6 +7,8 @@ import sitemap from '@astrojs/sitemap';
 
 import mdx from '@astrojs/mdx';
 
+import partytown from '@astrojs/partytown';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -18,5 +20,13 @@ export default defineConfig({
     format: 'directory'
   },
 
-  integrations: [sitemap(), mdx()]
+  integrations: [
+    sitemap(),
+    mdx(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push", "fbq"],
+      },
+    })
+  ]
 });
