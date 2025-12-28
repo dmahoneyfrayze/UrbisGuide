@@ -10,7 +10,7 @@ const links = [
 
 <header class="bg-background/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
 	<div class="container mx-auto px-6 h-24 flex items-center justify-between">
-		<a href="/" class="flex flex-col group">
+		<a href="/" class="flex flex-col group z-50 relative">
 			<span class="font-heading text-3xl font-bold tracking-tight text-secondary group-hover:text-primary transition-colors">URBIS<span class="text-primary group-hover:text-secondary transition-colors">CONCEPTS</span></span>
             <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-medium ml-1">Guide & Resources</span>
 		</a>
@@ -31,10 +31,57 @@ const links = [
         </div>
 
         <!-- Mobile Menu Button -->
-        <button class="md:hidden text-secondary p-2 hover:bg-gray-100 rounded-full transition-colors" aria-label="Menu">
+        <button id="mobile-menu-btn" class="md:hidden text-secondary p-2 hover:bg-gray-100 rounded-full transition-colors z-50 relative" aria-label="Menu">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
 	</div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex items-center justify-center md:hidden">
+        <nav class="flex flex-col items-center gap-8">
+            {links.map((link) => (
+                <a href={link.href} class="text-2xl font-heading font-bold text-secondary hover:text-primary transition-colors">
+                    {link.label}
+                </a>
+            ))}
+            <a href="https://urbisconcepts.com" class="mt-4 bg-secondary text-white px-8 py-4 text-sm uppercase tracking-widest font-bold shadow-lg">
+                Shop Store
+            </a>
+        </nav>
+    </div>
 </header>
+
+<script>
+    function setupMobileMenu() {
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                const isOpen = !menu.classList.contains('translate-x-full');
+                menu.classList.toggle('translate-x-full');
+                
+                // Toggle Button Icon
+                // This is a simple toggle, you could swap SVGs if you wanted a distinct 'X'
+                if (!isOpen) {
+                   document.body.style.overflow = 'hidden'; // Lock Body Scroll
+                } else {
+                   document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking a link
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    }
+
+    // Run on initial load and after every navigation (for ViewTransitions)
+    document.addEventListener('astro:page-load', setupMobileMenu);
+</script>
