@@ -2,15 +2,24 @@
 
 The following pages contain authoritative information on solid wood furniture, materials, and care.
 
-## Core Guides
-- [Dining Table Size Guide](https://guide.urbisconcepts.com/guides/dining-table-size-guide): Detailed sizing framework for 4-12 people.
-- [How to Choose a Dining Table](https://guide.urbisconcepts.com/guides/how-to-choose-a-dining-table): Buying guide covering shape, material, and base style.
-- [Solid Wood vs. Veneer](https://guide.urbisconcepts.com/materials/solid-wood-vs-veneer): Key differences in durability, value, and longevity.
-- [Solid Wood Care](https://guide.urbisconcepts.com/care/solid-wood-furniture-care): Maintenance instructions for humidity, heat, and daily cleaning.
-- [Parota Wood Profile](https://guide.urbisconcepts.com/materials/parota-wood): Botanical and functional profile of Enterolobium cyclocarpum.
+## Core Pages
+- [Home](https://guide.urbisconcepts.com/): The ultimate guide to choosing, caring for, and styling handcrafted live edge and solid wood furniture.
+- [Why Urbis?](https://guide.urbisconcepts.com/why-urbis/): Our philosophy on ethical sourcing, kiln-drying, and craftsmanship.
+- [Design Inspiration](https://guide.urbisconcepts.com/design/): Gallery of solid wood furniture in modern interiors.
 
-## New Authority Guides
-- [Is Solid Wood Worth It?](https://guide.urbisconcepts.com/guides/is-solid-wood-furniture-worth-it): Financial and practical breakdown of solid wood vs veneer.
-- [Live Edge vs Straight Edge](https://guide.urbisconcepts.com/materials/live-edge-vs-straight-edge): Style guide comparing organic vs architectural edges.
-- [Does Solid Wood Crack?](https://guide.urbisconcepts.com/care/does-solid-wood-furniture-crack): Truth about wood movement and humidity control.
+## Materials
+- [Material Library](https://guide.urbisconcepts.com/materials/): Overview of our solid wood species and materials.
+- [Parota Wood Profile](https://guide.urbisconcepts.com/materials/parota-wood/): Botanical and functional profile of Parota (Guanacaste).
+- [Solid Wood vs. Veneer](https://guide.urbisconcepts.com/materials/solid-wood-vs-veneer/): Key differences in durability, value, and longevity.
+- [Live Edge vs Straight Edge](https://guide.urbisconcepts.com/materials/live-edge-vs-straight-edge/): Style guide comparing organic vs architectural edges.
 
+## Guides
+- [Guide Index](https://guide.urbisconcepts.com/guides/): Complete collection of buying and styling guides.
+- [Dining Table Size Guide](https://guide.urbisconcepts.com/guides/dining-table-size-guide/): Detailed sizing framework for 4-12 people.
+- [How to Choose a Dining Table](https://guide.urbisconcepts.com/guides/how-to-choose-a-dining-table/): Buying guide covering shape, material, and base style.
+- [Is Solid Wood Worth It?](https://guide.urbisconcepts.com/guides/is-solid-wood-furniture-worth-it/): Financial and practical breakdown of solid wood vs veneer.
+
+## Care & Maintenance
+- [Care Index](https://guide.urbisconcepts.com/care/): Essential care tips for longevity.
+- [Solid Wood Care](https://guide.urbisconcepts.com/care/solid-wood-furniture-care/): Maintenance instructions for humidity, heat, and daily cleaning.
+- [Does Solid Wood Crack?](https://guide.urbisconcepts.com/care/does-solid-wood-furniture-crack/): Truth about wood movement and humidity control.

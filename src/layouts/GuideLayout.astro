@@ -15,7 +15,7 @@ if (frontmatter.category === 'Materials & Craft') {
 }
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+<BaseLayout title={frontmatter.title} description={frontmatter.description} image={frontmatter.image}>
     <Fragment slot="head">
         <Schema 
             title={frontmatter.title}
@@ -24,6 +24,8 @@ if (frontmatter.category === 'Materials & Craft') {
             type={frontmatter.schemaType || 'Article'}
             faqs={frontmatter.faqs}
             parent={parentHub}
+            image={frontmatter.image}
+            publishDate={frontmatter.publishDate}
         />
     </Fragment>
 
