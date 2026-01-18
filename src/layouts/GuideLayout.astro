@@ -1,51 +1,92 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import Schema from '../components/Schema.astro';
-import TrustAuthor from '../components/TrustAuthor.astro';
+import BaseLayout from "./BaseLayout.astro";
+import Schema from "../components/Schema.astro";
+import TrustAuthor from "../components/TrustAuthor.astro";
 
 const { frontmatter } = Astro.props;
-const currentUrl = `https://guide.urbisconcepts.com${Astro.url.pathname.replace(/\/+$/, '')}/`;
+const currentUrl = `https://guide.urbisconcepts.com${Astro.url.pathname.replace(/\/+$/, "")}/`;
 
 // Map Category to Parent Hub for Breadcrumbs
-let parentHub = { name: 'Guides', url: '/guides' };
-if (frontmatter.category === 'Materials & Craft') {
-    parentHub = { name: 'Materials', url: '/materials' };
-} else if (frontmatter.category === 'Care & Maintenance') {
-    parentHub = { name: 'Care', url: '/care' };
+let parentHub = { name: "Guides", url: "/guides" };
+if (frontmatter.category === "Materials & Craft") {
+    parentHub = { name: "Materials", url: "/materials" };
+} else if (frontmatter.category === "Care & Maintenance") {
+    parentHub = { name: "Care", url: "/care" };
 }
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description} image={frontmatter.image}>
+<BaseLayout
+    title={frontmatter.title}
+    description={frontmatter.description}
+    image={frontmatter.image}
+>
     <Fragment slot="head">
-        <Schema 
+        <Schema
             title={frontmatter.title}
             description={frontmatter.description}
             url={currentUrl}
-            type={frontmatter.schemaType || 'Article'}
+            type={frontmatter.schemaType || "Article"}
             faqs={frontmatter.faqs}
             parent={parentHub}
             image={frontmatter.image}
             publishDate={frontmatter.publishDate}
+            items={frontmatter.items}
         />
     </Fragment>
 
-	<article class="max-w-4xl mx-auto py-12 px-6 animate-fade-in">
+    <article class="max-w-4xl mx-auto py-12 px-6 animate-fade-in">
         <!-- Breadcrumb -->
-        <nav class="flex text-sm text-gray-500 mb-12 border-b border-gray-100 pb-4" aria-label="Breadcrumb">
+        <nav
+            class="flex text-sm text-gray-500 mb-12 border-b border-gray-100 pb-4"
+            aria-label="Breadcrumb"
+        >
             <ol class="inline-flex items-center space-x-1 md:space-x-3">
                 <li class="inline-flex items-center">
-                    <a href="/" class="hover:text-primary transition-colors flex items-center gap-2">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/></svg>
+                    <a
+                        href="/"
+                        class="hover:text-primary transition-colors flex items-center gap-2"
+                    >
+                        <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            ><path
+                                d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
+                            ></path></svg
+                        >
                         Home
                     </a>
                 </li>
                 <li>
                     <div class="flex items-center">
-                        <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        <svg
+                            class="w-3 h-3 text-gray-400 mx-1"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 6 10"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 9 4-4-4-4"></path>
                         </svg>
-                        <a href={`/${frontmatter.category === 'Materials & Craft' ? 'materials' : frontmatter.category === 'Care & Maintenance' ? 'care' : 'guides'}`} class="hover:text-primary transition-colors">
-                            {frontmatter.category === 'Materials & Craft' ? 'Materials' : frontmatter.category === 'Care & Maintenance' ? 'Care' : 'Guides'}
+                        <a
+                            href={`/${frontmatter.category === "Materials & Craft" ? "materials" : frontmatter.category === "Care & Maintenance" ? "care" : "guides"}`}
+                            class="hover:text-primary transition-colors"
+                        >
+                            {
+                                frontmatter.category === "Materials & Craft"
+                                    ? "Materials"
+                                    : frontmatter.category ===
+                                        "Care & Maintenance"
+                                      ? "Care"
+                                      : "Guides"
+                            }
                         </a>
                     </div>
                 </li>
@@ -54,33 +95,51 @@ if (frontmatter.category === 'Materials & Craft') {
 
         <!-- Header -->
         <header class="mb-16 text-center max-w-3xl mx-auto">
-            <span class="inline-block py-1 px-3 border border-primary/30 rounded-full text-primary text-xs uppercase tracking-[0.2em] font-bold mb-6 bg-primary/5">
-                {frontmatter.category || 'Guide'}
+            <span
+                class="inline-block py-1 px-3 border border-primary/30 rounded-full text-primary text-xs uppercase tracking-[0.2em] font-bold mb-6 bg-primary/5"
+            >
+                {frontmatter.category || "Guide"}
             </span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 text-secondary leading-tight">
+            <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 text-secondary leading-tight"
+            >
                 {frontmatter.title}
             </h1>
-
         </header>
-        
+
         <!-- Content -->
-        <div class="prose prose-lg md:prose-xl prose-headings:font-heading prose-headings:text-secondary prose-p:text-gray-600 prose-p:leading-loose prose-a:text-primary prose-a:font-bold hover:prose-a:text-primary/80 prose-img:rounded-xl prose-img:shadow-lg mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+        <div
+            class="prose prose-lg md:prose-xl prose-headings:font-heading prose-headings:text-secondary prose-p:text-gray-600 prose-p:leading-loose prose-a:text-primary prose-a:font-bold hover:prose-a:text-primary/80 prose-img:rounded-xl prose-img:shadow-lg mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100"
+        >
             <slot />
             <TrustAuthor />
         </div>
 
         <!-- Call to Action -->
         <div class="mt-20 pt-12 border-t border-gray-200 text-center">
-            <div class="bg-secondary rounded-2xl p-10 md:p-16 text-white relative overflow-hidden group">
-                <div class="absolute inset-0 bg-primary/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+            <div
+                class="bg-secondary rounded-2xl p-10 md:p-16 text-white relative overflow-hidden group"
+            >
+                <div
+                    class="absolute inset-0 bg-primary/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"
+                >
+                </div>
                 <div class="relative z-10">
-                    <h3 class="text-3xl font-heading font-bold mb-4">Ready to find your perfect table?</h3>
-                    <p class="mb-8 text-gray-300 text-lg max-w-xl mx-auto">Explore our exclusive collection of handcrafted solid wood dining tables, built to your exact specifications.</p>
-                    <a href="https://urbisconcepts.com/collections/live-edge" class="inline-block bg-white text-secondary px-10 py-4 font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors shadow-lg">
+                    <h3 class="text-3xl font-heading font-bold mb-4">
+                        Ready to find your perfect table?
+                    </h3>
+                    <p class="mb-8 text-gray-300 text-lg max-w-xl mx-auto">
+                        Explore our exclusive collection of handcrafted solid
+                        wood dining tables, built to your exact specifications.
+                    </p>
+                    <a
+                        href="https://urbisconcepts.com/collections/live-edge"
+                        class="inline-block bg-white text-secondary px-10 py-4 font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors shadow-lg"
+                    >
                         Shop Live Edge Tables
                     </a>
                 </div>
             </div>
         </div>
-	</article>
+    </article>
 </BaseLayout>

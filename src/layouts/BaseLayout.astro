@@ -1,81 +1,99 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/playfair-display/400.css';
-import '@fontsource/playfair-display/600.css';
-import '@fontsource/playfair-display/700.css';
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/600.css";
+import "@fontsource/playfair-display/700.css";
 
 interface Props {
-	title: string;
-	description?: string;
-    image?: string;
+  title: string;
+  description?: string;
+  image?: string;
 }
 
-const { title, description = "The ultimate guide to solid wood furniture, care, and design by Urbis Concepts.", image = "https://urbisconcepts.com/cdn/shop/files/Parota_Live_Edge_Dining_Table_1.jpg?v=1700000000" } = Astro.props;
+const {
+  title,
+  description = "The ultimate guide to solid wood furniture, care, and design by Urbis Concepts.",
+  image = "https://urbisconcepts.com/cdn/shop/files/Parota_Live_Edge_Dining_Table_1.jpg?v=1700000000",
+} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="en" class="text-secondary bg-background font-sans">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="canonical" href={canonicalURL} />
-        
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={Astro.url} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={Astro.url} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={image} />
-		<title>{title} | Urbis Concepts Guide</title>
-        
-        <!-- Performance optimizations -->
-        <meta name="theme-color" content="#c2542a" />
-        <link rel="preconnect" href="https://beta.leadconnectorhq.com" />
-        <link rel="preconnect" href="https://links.urbisconcepts.com" />
-        
-        <ViewTransitions />
-        <script 
-          type="text/partytown"
-          src="https://links.urbisconcepts.com/js/external-tracking.js"
-          data-tracking-id="tk_412b70e7363e4997aa21be85041884ba">
-        </script>
-        <slot name="head" />
-	</head>
-	<body class="flex flex-col min-h-screen">
-		<Header />
-		<main class="flex-grow container mx-auto px-4 py-8">
-			<slot />
-		</main>
-		<Footer />
-        
-        <div 
-          data-chat-widget 
-          data-widget-id="68f8484c008ff375adcc09ef" 
-          data-location-id="Z9Vg8cf0Zm8TE2uP4PHd">
-        </div> 
-        <script 
-          type="text/partytown"
-          src="https://beta.leadconnectorhq.com/loader.js"  
-          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
-          data-widget-id="68f8484c008ff375adcc09ef"> 
-        </script>
-	</body>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-080DVEFY0Y"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-080DVEFY0Y");
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <title>{title} | Urbis Concepts Guide</title>
+
+    <!-- Performance optimizations -->
+    <meta name="theme-color" content="#c2542a" />
+    <link rel="preconnect" href="https://beta.leadconnectorhq.com" />
+    <link rel="preconnect" href="https://links.urbisconcepts.com" />
+
+    <ViewTransitions />
+    <script
+      type="text/partytown"
+      src="https://links.urbisconcepts.com/js/external-tracking.js"
+      data-tracking-id="tk_412b70e7363e4997aa21be85041884ba"
+    ></script>
+    <slot name="head" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+
+    <div
+      data-chat-widget
+      data-widget-id="68f8484c008ff375adcc09ef"
+      data-location-id="Z9Vg8cf0Zm8TE2uP4PHd"
+    >
+    </div>
+    <script
+      type="text/partytown"
+      src="https://beta.leadconnectorhq.com/loader.js"
+      data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+      data-widget-id="68f8484c008ff375adcc09ef"
+    ></script>
+  </body>
 </html>
