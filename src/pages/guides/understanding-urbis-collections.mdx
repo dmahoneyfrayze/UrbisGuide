@@ -27,6 +27,7 @@ items:
     description: "Versatile, everyday designs perfect for condos and modern living."
 ---
 import ProductCTA from '../../components/ProductCTA.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
 
 # Understanding Urbis Collections
 
@@ -41,7 +42,7 @@ You can explore all available pieces at any time on the **[All Products page](ht
 <ProductCTA
   title="Live Edge Collection"
   description="The Live Edge Collection preserves the natural edge of the tree, highlighting organic curves, knots, and grain patterns. Paired with refined, modern bases, these designs work especially well as statement dining tables—bringing sculptural presence without overpowering clean interiors."
-  image="https://urbisconcepts.com/cdn/shop/files/Parota_Live_Edge_Dining_Table_1.jpg?v=1700000000"
+  image="https://urbisconcepts.com/cdn/shop/files/Live_Edge_Parota_Table.png?v=1764875346"
   url="https://urbisconcepts.com/collections/live-edge"
   buttonText="View Collection"
 />
@@ -56,7 +57,7 @@ You can explore all available pieces at any time on the **[All Products page](ht
 <ProductCTA
   title="Marwar Collection"
   description="Drawing inspiration from traditional Indian woodworking, the Marwar Collection emphasizes rich tones, substantial slabs, and expressive grain movement. These pieces feel anchored and warm, ideal for spaces that need furniture with permanence and character."
-  image="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800"
+  image="https://urbisconcepts.com/cdn/shop/collections/Marwar_Collection_16x9_b9100393-0dbf-46b6-bd42-b7387f4b9979.png?v=1763863663"
   url="https://urbisconcepts.com/collections/marwar-collection"
   buttonText="View Collection"
 />
@@ -71,7 +72,7 @@ You can explore all available pieces at any time on the **[All Products page](ht
 <ProductCTA
   title="Strata Collection"
   description="The Strata Collection focuses on layered planes and stepped profiles, creating a subtle stacked effect. Designed for modern spaces where you want clean lines and visual lightness, Strata pieces often feel architectural—quietly detailed rather than decorative."
-  image="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800"
+  image="https://urbisconcepts.com/cdn/shop/collections/Strata_Collection_16x9_02108dfa-3b0b-45b3-8af1-73d92c064b7c.png?v=1763863842"
   url="https://urbisconcepts.com/collections/strata-collection"
   buttonText="View Collection"
 />
@@ -86,7 +87,7 @@ You can explore all available pieces at any time on the **[All Products page](ht
 <ProductCTA
   title="Stria Collection"
   description="Defined by linear texture, fluting, ribbing, and directional grain, the Stria Collection introduces depth and shadow. If you prefer minimal forms but want more visual interest than a flat panel, Stria adds movement without noise."
-  image="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=800"
+  image="https://urbisconcepts.com/cdn/shop/collections/Stria_Collection_16x9_5559edd5-e42c-432e-a469-a3ed5b485ee1.png?v=1762381223"
   url="https://urbisconcepts.com/collections/stria-collection"
   buttonText="View Collection"
 />
@@ -101,7 +102,7 @@ You can explore all available pieces at any time on the **[All Products page](ht
 <ProductCTA
   title="Aravalli Collection"
   description="Named after the Aravalli mountain range, this collection leans into soft, sculpted forms and grounded silhouettes. Rounded corners and eased edges make Aravalli ideal for spaces where comfort and flow matter—bringing warmth without sharp lines."
-  image="https://images.unsplash.com/photo-1540932296757-aaa274531d04?auto=format&fit=crop&q=80&w=800"
+  image="https://urbisconcepts.com/cdn/shop/collections/Aravalli_Collection_collage.png?v=1763863775"
   url="https://urbisconcepts.com/collections/aravalli-collection"
   buttonText="View Collection"
 />
@@ -116,7 +117,7 @@ You can explore all available pieces at any time on the **[All Products page](ht
 <ProductCTA
   title="Acacia Studio Collection"
   description="The Acacia Studio Collection showcases acacia wood in versatile, ready-to-style designs. From live edge dining tables to round coffee tables, these pieces are designed for everyday use, making them a strong fit for spaces where durability matters just as much as aesthetics."
-  image="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=800"
+  image="https://urbisconcepts.com/cdn/shop/collections/Acacia_Collection_16x9_fb4f2bca-167c-4964-b452-a3f93d41c0b5.png?v=1763863722"
   url="https://urbisconcepts.com/collections/acacia-studio-collection"
   buttonText="View Collection"
 />
@@ -127,6 +128,21 @@ You can explore all available pieces at any time on the **[All Products page](ht
 *   High-use dining and living areas
 
 ---
+
+<ImageGallery 
+  title="Urbis Design Gallery" 
+  description="See how our collections come to life in real homes and spaces across the GTA."
+  images={[
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_1044.heic?v=1755633336&width=2000", alt: "Large live edge dining/boardroom table in a modern office space" },
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_2505.heic?v=1755633335&width=2000", alt: "Live edge dining table with natural wood grain in a residential setting" },
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_1762.jpg?v=1755633334&width=2000", alt: "Solid wood dining table set in a brightly lit dining room" },
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_8817.heic?v=1755633335&width=2000", alt: "Solid wood furniture piece in a cozy living room environment" },
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_9464.heic?v=1755633334&width=2000", alt: "Live edge coffee table in a modern living space" },
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_2600.heic?v=1755633334&width=2000", alt: "Handcrafted side table showcasing unique wood textures" },
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_8835.heic?v=1755633335&width=2000", alt: "Close-up of natural wood grain and live edge detail" },
+    { src: "https://urbisconcepts.com/cdn/shop/files/IMG_0082.heic?v=1755633335&width=2000", alt: "Handcrafted wood dining table with elegant base" }
+  ]}
+/>
 
 ## How to Choose the Right Collection
 
