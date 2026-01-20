@@ -119,7 +119,9 @@ let mainEntity: any = {
   isPartOf: { "@id": `${url}` },
   headline: title,
   description: description,
-  image: image || `${siteUrl}/images/default-og.jpg`,
+  image:
+    image ||
+    "https://urbisconcepts.com/cdn/shop/files/Live_Edge_Parota_Table.png?v=1764875346",
   datePublished: publishDate || new Date().toISOString(),
   author: { "@id": `${siteUrl}/#organization` },
   publisher: { "@id": `${siteUrl}/#organization` },
