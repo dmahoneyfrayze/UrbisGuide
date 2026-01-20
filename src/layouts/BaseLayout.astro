@@ -54,6 +54,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={title} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -61,6 +62,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
+    <meta property="twitter:image:alt" content={title} />
     <title>{title} | Urbis Concepts Guide</title>
 
     <!-- Performance optimizations -->
@@ -72,8 +74,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <script
       type="text/partytown"
       src="https://links.urbisconcepts.com/js/external-tracking.js"
-      data-tracking-id="tk_412b70e7363e4997aa21be85041884ba"
-    ></script>
+      data-tracking-id="tk_412b70e7363e4997aa21be85041884ba"></script>
     <slot name="head" />
   </head>
   <body class="flex flex-col min-h-screen">
@@ -93,7 +94,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       type="text/partytown"
       src="https://beta.leadconnectorhq.com/loader.js"
       data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="68f8484c008ff375adcc09ef"
-    ></script>
+      data-widget-id="68f8484c008ff375adcc09ef"></script>
   </body>
 </html>
