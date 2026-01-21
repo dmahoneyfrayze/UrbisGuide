@@ -327,22 +327,20 @@
             formMessage.classList.add("hidden");
 
             try {
-                const response = await fetch(
-                    "https://services.leadconnectorhq.com/hooks/Z9Vg8cf0Zm8TE2uP4PHd/webhook-trigger/2efa5f24-9fc3-466e-828c-7df11a9c6ee4",
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            email: email,
-                            source: "Urbis Guide Table Sizing Tool",
-                            guests: slider.value,
-                            room_width: i_width.value,
-                            room_length: i_length.value,
-                        }),
+                // Use local API proxy to avoid CORS issues
+                const response = await fetch("/api/submit-lead", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
                     },
-                );
+                    body: JSON.stringify({
+                        email: email,
+                        source: "Urbis Guide Table Sizing Tool",
+                        guests: slider.value,
+                        room_width: i_width.value,
+                        room_length: i_length.value,
+                    }),
+                });
 
                 if (response.ok) {
                     formMessage.innerText =
