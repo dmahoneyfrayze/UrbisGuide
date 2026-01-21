@@ -1,0 +1,73 @@
+import { d as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_BnC5UhzS.mjs';
+import 'piccolore';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_Oh7OFzZQ.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Home", "description": "The ultimate guide to choosing, caring for, and styling handcrafted live edge and solid wood furniture by Urbis Concepts.", "image": "https://urbisconcepts.com/cdn/shop/files/IMG_1044.heic?v=1755633336&width=1200" }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<div class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-secondary"> <img src="https://images.unsplash.com/photo-1572048572872-2394404cf1f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80" alt="Live Edge Wood Texture" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20" fetchpriority="high" loading="eager" decoding="async"> <div class="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-black/30 z-0"></div> <div class="relative z-10 text-center max-w-5xl mx-auto px-6 animate-fade-in"> <span class="inline-block py-1 px-3 border border-primary/50 rounded-full text-primary text-xs uppercase tracking-[0.3em] font-medium mb-8 bg-black/20 backdrop-blur-sm animate-slide-up">
+The Authority on Solid Wood
+</span> <h1 class="text-6xl md:text-7xl lg:text-8xl font-heading font-bold mb-8 text-white leading-tight animate-slide-up delay-100">
+Elevate Your <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Living Space</span> </h1> <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto font-light animate-slide-up delay-200">
+The ultimate guide to choosing, caring for, and styling
+                handcrafted live edge and solid wood furniture.
+</p> <div class="flex flex-col sm:flex-row justify-center gap-6 animate-slide-up delay-300"> <a href="/guides" class="group relative px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest overflow-hidden hover:bg-primary/90 transition-colors"> <span class="relative z-10">Explore Guides</span> <div class="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-primary/80"></div> </a> <a href="/materials" class="px-8 py-4 border border-white/30 text-white font-bold uppercase tracking-widest hover:bg-white hover:text-secondary transition-all backdrop-blur-sm">
+Material Library
+</a> </div> </div> </div>  <div class="container mx-auto px-6 py-24"> <div class="text-center mb-16"> <span class="text-primary uppercase tracking-widest text-sm font-bold">Curated Spaces</span> <h2 class="text-4xl md:text-5xl font-heading font-bold mt-4 mb-6">
+Shop By Room
+</h2> <p class="text-gray-500 max-w-2xl mx-auto text-lg">
+Explore our comprehensive guides to furnishing your home with
+                handcrafted solid wood furniture.
+</p> </div> <div class="grid md:grid-cols-3 gap-8"> <!-- Bedroom Card --> <a href="/guides/bedroom-furniture-collection" class="group relative h-[500px] overflow-hidden rounded-sm block"> <img src="https://urbisconcepts.com/cdn/shop/collections/MarwarLoftKingBed1.png?v=1768959083&width=1024" alt="Bedroom Furniture" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"> <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div> <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"> <h3 class="text-3xl text-white font-heading font-bold mb-2">
+Bedroom
+</h3> <p class="text-gray-300 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+Create your personal sanctuary with solid wood beds and
+                        storage.
+</p> <span class="inline-block text-white border-b border-white pb-1 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+Explore Guide
+</span> </div> </a> <!-- Dining Card --> <a href="/guides/dining-room-furniture" class="group relative h-[500px] overflow-hidden rounded-sm block"> <img src="https://urbisconcepts.com/cdn/shop/collections/Acacia_Collection_1x1_b2abb2d6-dd24-4046-907e-d493e42c63c0.jpg?v=1768962000&width=1024" alt="Dining Room Furniture" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"> <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div> <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"> <h3 class="text-3xl text-white font-heading font-bold mb-2">
+Dining Room
+</h3> <p class="text-gray-300 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+Gather in style with live edge tables and handcrafted
+                        seating.
+</p> <span class="inline-block text-white border-b border-white pb-1 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+Explore Guide
+</span> </div> </a> <!-- Living Room Card --> <a href="/guides/living-room-furniture" class="group relative h-[500px] overflow-hidden rounded-sm block"> <img src="https://urbisconcepts.com/cdn/shop/files/MarwarLoftCoffeeTable_OpenShelf_43_2.png?v=1762380151&width=1024" alt="Living Room Furniture" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"> <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div> <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"> <h3 class="text-3xl text-white font-heading font-bold mb-2">
+Living Room
+</h3> <p class="text-gray-300 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+Ground your space with coffee tables and media consoles.
+</p> <span class="inline-block text-white border-b border-white pb-1 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+Explore Guide
+</span> </div> </a> </div> </div>  <div class="container mx-auto px-6 py-24 -mt-20 relative z-20"> <div class="grid md:grid-cols-3 gap-8"> <div class="group bg-surface p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-t-4 border-primary"> <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path> </svg> </div> <h3 class="text-3xl font-heading font-bold mb-4 text-secondary group-hover:text-primary transition-colors">
+Buying Guides
+</h3> <p class="text-gray-500 mb-8 leading-relaxed">
+Expert advice on sizing, wood species comparisons, and
+                    selecting the perfect piece for your unique space.
+</p> <a href="/guides" class="inline-flex items-center text-secondary font-bold uppercase tracking-widest text-sm hover:text-primary transition-colors">
+Read Guides <span class="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span> </a> </div> <div class="group bg-surface p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-t-4 border-secondary"> <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-6 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path> </svg> </div> <h3 class="text-3xl font-heading font-bold mb-4 text-secondary group-hover:text-primary transition-colors">
+Wood Care
+</h3> <p class="text-gray-500 mb-8 leading-relaxed">
+Protect your investment. Learn the secrets to maintaining
+                    the beauty of solid wood against humidity and wear.
+</p> <a href="/care" class="inline-flex items-center text-secondary font-bold uppercase tracking-widest text-sm hover:text-primary transition-colors">
+Read Tips <span class="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span> </a> </div> <div class="group bg-surface p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-t-4 border-accent"> <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-white transition-colors"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path> </svg> </div> <h3 class="text-3xl font-heading font-bold mb-4 text-secondary group-hover:text-primary transition-colors">
+Design Ideas
+</h3> <p class="text-gray-500 mb-8 leading-relaxed">
+Inspiration galleries featuring modern organic, industrial,
+                    and contemporary interiors styled with solid wood.
+</p> <a href="/design" class="inline-flex items-center text-secondary font-bold uppercase tracking-widest text-sm hover:text-primary transition-colors">
+View Gallery <span class="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span> </a> </div> </div> </div> ` })}`;
+}, "/Users/denismahoney/Desktop/Websites/Urbis-Guide/src/pages/index.astro", void 0);
+
+const $$file = "/Users/denismahoney/Desktop/Websites/Urbis-Guide/src/pages/index.astro";
+const $$url = "";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$Index,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

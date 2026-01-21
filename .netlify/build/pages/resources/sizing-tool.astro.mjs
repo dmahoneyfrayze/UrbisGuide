@@ -1,0 +1,58 @@
+import { d as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_BnC5UhzS.mjs';
+import 'piccolore';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_Oh7OFzZQ.mjs';
+import { $ as $$TableCalculator } from '../../chunks/TableCalculator_COn3oE1r.mjs';
+export { renderers } from '../../renderers.mjs';
+
+const $$SizingTool = createComponent(($$result, $$props, $$slots) => {
+  const title = "Dining Table Size Calculator | Urbis Concepts";
+  const description = "Find the perfect dining table size for your room and guest count. Our interactive calculator accounts for clearance, flow, and comfort.";
+  const image = "https://urbisconcepts.com/cdn/shop/files/Parota_Live_Edge_Dining_Table_1.jpg?v=1700000000";
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": title, "description": description, "image": image }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="py-12 md:py-24 px-6 relative overflow-hidden"> <!-- Background Elements --> <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/5 to-transparent -z-10"></div> <div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10"></div> <div class="container mx-auto max-w-5xl"> <!-- Header --> <div class="text-center mb-16"> <span class="inline-block py-1 px-3 border border-primary/30 rounded-full text-primary text-xs uppercase tracking-[0.2em] font-bold mb-6 bg-primary/5">
+Free Resource
+</span> <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 text-secondary leading-tight">
+Dining Table <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Size Calculator</span> </h1> <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+Choosing the right slab isn't just about the grain—it's
+                    about the fit. Use our tool to find the dimensions that work
+                    for your home.
+</p> </div> <!-- Calculator Component --> ${renderComponent($$result2, "TableCalculator", $$TableCalculator, {})} <!-- Educational Content --> <div class="mt-24 grid md:grid-cols-2 gap-12 items-start"> <div class="prose prose-lg text-gray-600"> <h3 class="font-heading text-secondary font-bold text-2xl mb-4">
+How Sizing Works
+</h3> <p>
+A common mistake when buying a live edge slab is
+                        forgetting about the "Chair Clearance." For a
+                        comfortable dining experience, you need at least <strong>36 inches (3 feet)</strong> of clearance around the perimeter of the table to allow
+                        guests to pull out chairs and move behind them.
+</p> <h3 class="font-heading text-secondary font-bold text-2xl mt-8 mb-4">
+Width Considerations
+</h3> <p>
+While traditional tables are 36-40 inches wide, live
+                        edge slabs vary. A <strong>40-44 inch width</strong> is the
+                        "gold standard" for family dining as it allows for center
+                        serving dishes while maintaining intimate conversation space.
+</p> </div> <div class="bg-surface p-8 rounded-xl shadow-lg border border-gray-100"> <h3 class="font-heading text-secondary font-bold text-xl mb-6">
+Seating Rules of Thumb
+</h3> <ul class="space-y-6"> <li class="flex gap-4 items-start"> <span class="font-heading text-4xl text-primary/20 font-bold">01</span> <div> <strong class="block text-secondary text-lg mb-1">6 ft Table</strong> <p class="text-sm text-gray-500">
+Comfortable for 6 people (2 on each side, 1
+                                    on each end).
+</p> </div> </li> <li class="flex gap-4 items-start"> <span class="font-heading text-4xl text-primary/20 font-bold">02</span> <div> <strong class="block text-secondary text-lg mb-1">8 ft Table</strong> <p class="text-sm text-gray-500">
+Comfortable for 8 people (3 on each side, 1
+                                    on each end).
+</p> </div> </li> <li class="flex gap-4 items-start"> <span class="font-heading text-4xl text-primary/20 font-bold">03</span> <div> <strong class="block text-secondary text-lg mb-1">10 ft Table</strong> <p class="text-sm text-gray-500">
+Grand seating for 10 people (4 on each side,
+                                    1 on each end).
+</p> </div> </li> </ul> </div> </div> </div> </div> ` })}`;
+}, "/Users/denismahoney/Desktop/Websites/Urbis-Guide/src/pages/resources/sizing-tool.astro", void 0);
+
+const $$file = "/Users/denismahoney/Desktop/Websites/Urbis-Guide/src/pages/resources/sizing-tool.astro";
+const $$url = "/resources/sizing-tool/";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$SizingTool,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
